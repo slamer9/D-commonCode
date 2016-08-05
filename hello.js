@@ -8,8 +8,8 @@ http.createServer(function(request, response)
 	let chunk = null;
 	while (null !== (chunk = request.read()));
 	  response.write(chunk);
+	  response.end();
    });
-   response.end();
 }).listen(8080);
 
 console.log('Listening on port 8080...');
